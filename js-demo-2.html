@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <script>
+      let toggleFlag = true;
+      function toggleBookName() {
+        if (toggleFlag) {
+          document.getElementById("heading5").innerHTML =
+            "Harry Potter and the Order of Phoenix";
+        } else {
+          document.getElementById("heading5").innerHTML = "";
+        }
+        toggleFlag = !toggleFlag;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Text displayed on button click</h2>
+    <button
+      type="button"
+      onClick="document.getElementById('heading4').innerHTML='Avengers: End Game'"
+    >
+      Click to display text
+    </button>
+    <h4 id="heading4"></h4>
+
+    <button type="button" onClick="toggleBookName()">
+      Click to toggle book name
+    </button>
+    <h5 id="heading5"></h5>
+  </body>
+</html>
