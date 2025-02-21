@@ -1,0 +1,19 @@
+{
+  "employees": [
+    {
+      "id": "2001",
+      "empName": "Priya Raj",
+      "empDesignation": "Manager"
+    },
+    {
+      "id": "2003",
+      "empName": "Mary John",
+      "empDesignation": "TM"
+    },
+    {
+      "id": "4420",
+      "empName": "Will Smith",
+      "empDesignation": "TL"
+    }
+  ]
+}
