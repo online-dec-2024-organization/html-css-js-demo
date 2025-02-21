@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Promise Demo</title>
+  </head>
+  <body>
+    <div>
+      DIV 1
+      <p id="para1"></p>
+    </div>
+    <div>
+      DIV 2
+      <p id="para2"></p>
+    </div>
+    <div>
+      DIV 3
+      <p id="para3"></p>
+    </div>
+    <script>
+      let myPromise = new Promise((resolve, reject) => {
+        // here lets do the asynchronous cheque deposit which is a success
+        // if the asynchronous task is a success call resolve function
+
+        // resolve(
+        //   "Cheque deposited successfully!! Your account balannce is Rs. 10000"
+        // );
+        // if the asynchronous function is a failure call reject function
+        reject("Cheque deposit failed!!");
+      });
+
+      myPromise
+        .then((chequeResponse) => {
+          document.getElementById("para1").innerHTML = chequeResponse;
+          // now we can do shopping functionality
+          return "Lets start shopping!!";
+        })
+        .then((shoppingResponse) => {
+          document.getElementById("para2").innerHTML = shoppingResponse;
+        })
+        .catch((error) => (document.getElementById("para3").innerHTML = error));
+    </script>
+  </body>
+</html>
